@@ -27,7 +27,7 @@ export default function AddTrustee() {
       <button
         onClick={() => setOpen(true)}
         className="flex items-center gap-2 px-4 py-2.5 rounded-sm text-sm font-mono uppercase tracking-wider"
-        style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}
+        style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}
       >
         <Plus size={14} /> Add Trustee
       </button>
@@ -45,7 +45,7 @@ export default function AddTrustee() {
       <input placeholder="Email" value={form.contact_email} onChange={(e) => setForm({ ...form, contact_email: e.target.value })} className="px-3 py-2.5 text-sm rounded-sm" style={{ background: 'var(--navy-deep)', border: '1px solid var(--steel-800)', color: 'var(--ice)' }} />
       <input placeholder="Phone" value={form.contact_phone} onChange={(e) => setForm({ ...form, contact_phone: e.target.value })} className="px-3 py-2.5 text-sm rounded-sm" style={{ background: 'var(--navy-deep)', border: '1px solid var(--steel-800)', color: 'var(--ice)' }} />
       <div className="sm:col-span-2 flex gap-3">
-        <button type="submit" disabled={saving} className="px-4 py-2 rounded-sm text-sm font-mono uppercase tracking-wider" style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}>
+        <button type="submit" disabled={saving} className="px-4 py-2 rounded-sm text-sm font-mono uppercase tracking-wider" style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}>
           {saving ? 'Saving…' : 'Save'}
         </button>
         <button type="button" onClick={() => setOpen(false)} className="px-4 py-2 rounded-sm text-sm font-mono uppercase tracking-wider" style={{ border: '1px solid var(--steel-600)', color: 'var(--steel-200)' }}>

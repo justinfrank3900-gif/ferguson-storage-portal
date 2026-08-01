@@ -42,8 +42,8 @@ export default function VerifyPage() {
             className="flex-1 px-3 py-3 text-sm rounded-sm font-mono"
             style={{ background: 'var(--navy-panel)', border: '1px solid var(--steel-800)', color: 'var(--ice)' }}
           />
-          <button type="submit" className="px-4 rounded-sm" style={{ background: 'var(--brass)' }}>
-            <Search size={16} color="var(--navy-deep)" />
+          <button type="submit" className="px-4 rounded-sm" style={{ background: 'var(--ice)' }}>
+            <Search size={16} color="var(--navy-panel)" />
           </button>
         </form>
 

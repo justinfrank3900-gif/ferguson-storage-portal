@@ -29,7 +29,7 @@ export default function LoginPage() {
   return (
     <div
       className="guilloche-bg min-h-screen w-full flex items-center justify-center px-6"
-      style={{ background: 'radial-gradient(ellipse at 50% -10%, #142640 0%, #08111f 60%)' }}
+      style={{ background: 'radial-gradient(ellipse at 50% -10%, #ffffff 0%, #e6eaf0 60%)' }}
     >
       <div className="w-full max-w-[420px]">
         {/* Seal / wordmark */}
@@ -63,7 +63,7 @@ export default function LoginPage() {
           style={{
             background: 'var(--navy-panel)',
             border: '1px solid var(--steel-800)',
-            boxShadow: '0 30px 60px -20px rgba(0,0,0,0.6)',
+            boxShadow: '0 20px 45px -20px rgba(15,33,55,0.18)',
           }}
         >
           <form onSubmit={handleSubmit}>
@@ -119,8 +119,8 @@ export default function LoginPage() {
               disabled={loading}
               className="w-full py-3 rounded-sm font-mono text-[11px] tracking-[0.18em] uppercase transition-opacity"
               style={{
-                background: 'var(--brass)',
-                color: 'var(--navy-deep)',
+                background: 'var(--ice)',
+                color: 'var(--navy-panel)',
                 opacity: loading ? 0.6 : 1,
                 cursor: loading ? 'not-allowed' : 'pointer',
               }}

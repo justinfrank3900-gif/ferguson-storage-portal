@@ -92,7 +92,7 @@ export default function ManageCategoriesModal({
             onClick={addCategory}
             disabled={saving || !newName.trim()}
             className="px-3.5 rounded-sm"
-            style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}
+            style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}
           >
             <Plus size={14} />
           </button>

@@ -211,7 +211,7 @@ export default function TemplatesPage() {
           <button
             onClick={startAdd}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-sm text-xs font-mono uppercase tracking-wider"
-            style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}
+            style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}
           >
             <Plus size={14} /> Add Template
           </button>
@@ -282,7 +282,7 @@ export default function TemplatesPage() {
           )}
 
           <div className="flex gap-2 mt-3">
-            <button onClick={saveTemplate} disabled={saving || !fCategory} className="px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider" style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}>
+            <button onClick={saveTemplate} disabled={saving || !fCategory} className="px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider" style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}>
               {saving ? 'Saving…' : editingId ? 'Save Changes' : 'Create Template'}
             </button>
             <button onClick={() => { setShowAdd(false); setEditingId(null) }} className="px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider" style={{ border: '1px solid var(--steel-600)', color: 'var(--steel-200)' }}>

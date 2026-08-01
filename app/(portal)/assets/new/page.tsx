@@ -149,7 +149,7 @@ export default function NewAssetPage() {
           type="submit"
           disabled={saving}
           className="w-full py-3.5 rounded-sm font-mono text-[11px] tracking-[0.18em] uppercase flex items-center justify-center gap-2"
-          style={{ background: 'var(--brass)', color: 'var(--navy-deep)', opacity: saving ? 0.6 : 1 }}
+          style={{ background: 'var(--ice)', color: 'var(--navy-panel)', opacity: saving ? 0.6 : 1 }}
         >
           {saving && <Loader2 size={14} className="animate-spin" />}
           {saving ? 'Saving…' : 'Save Pickup'}

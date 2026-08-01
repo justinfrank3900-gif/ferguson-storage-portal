@@ -33,7 +33,7 @@ export default function FileLien({
       <button
         onClick={() => setOpen(true)}
         className="font-mono text-[10px] uppercase px-2.5 py-1 rounded-sm"
-        style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}
+        style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}
       >
         {lien.status === 'pending' ? 'File Lien' : 'Edit'}
       </button>
@@ -66,7 +66,7 @@ export default function FileLien({
         className="px-2 py-1 text-[11px] rounded-sm"
         style={{ background: 'var(--navy-deep)', border: '1px solid var(--steel-800)', color: 'var(--ice)' }}
       />
-      <button type="submit" disabled={saving} className="font-mono text-[10px] uppercase px-2.5 py-1 rounded-sm" style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}>
+      <button type="submit" disabled={saving} className="font-mono text-[10px] uppercase px-2.5 py-1 rounded-sm" style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}>
         {saving ? '…' : 'Save'}
       </button>
       <button type="button" onClick={() => setOpen(false)} className="font-mono text-[10px] uppercase px-2 py-1" style={{ color: 'var(--steel-400)' }}>

@@ -183,7 +183,7 @@ export default function InboxPage() {
           <button
             onClick={() => setShowAddContact((v) => !v)}
             className="w-full flex items-center justify-center gap-1.5 mt-2 py-2 rounded-sm text-[10.5px] font-mono uppercase tracking-wider"
-            style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}
+            style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}
           >
             <Plus size={12} /> Add Contact
           </button>
@@ -219,7 +219,7 @@ export default function InboxPage() {
               >
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-[11px] font-bold"
-                  style={{ background: avatarColor(c.name), color: 'var(--navy-deep)' }}
+                  style={{ background: avatarColor(c.name), color: '#ffffff' }}
                 >
                   {initials(c.name)}
                 </div>
@@ -348,7 +348,7 @@ export default function InboxPage() {
                       onClick={send}
                       disabled={sending || !body.trim()}
                       className="flex items-center gap-1.5 px-4 rounded-sm text-xs font-bold"
-                      style={{ background: 'var(--brass)', color: 'var(--navy-deep)', opacity: sending || !body.trim() ? 0.5 : 1 }}
+                      style={{ background: 'var(--ice)', color: 'var(--navy-panel)', opacity: sending || !body.trim() ? 0.5 : 1 }}
                     >
                       <Send size={13} /> {channel === 'call' ? 'Log' : 'Send'}
                     </button>

@@ -42,7 +42,7 @@ export default function NumbersPage() {
       <button
         onClick={() => setShowAdd((v) => !v)}
         className="flex items-center gap-1.5 px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider mb-5"
-        style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}
+        style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}
       >
         <Plus size={13} /> Add Number
       </button>
@@ -51,7 +51,7 @@ export default function NumbersPage() {
         <form onSubmit={handleAdd} className="rounded-sm p-5 mb-6 flex gap-3" style={{ background: 'var(--navy-panel)', border: '1px solid var(--steel-800)' }}>
           <input required placeholder="+1 403 555 0100" value={form.phone_number} onChange={(e) => setForm({ ...form, phone_number: e.target.value })} className="flex-1 px-3 py-2 text-sm rounded-sm" style={{ background: 'var(--navy-deep)', border: '1px solid var(--steel-800)', color: 'var(--ice)' }} />
           <input placeholder="Label (optional)" value={form.label} onChange={(e) => setForm({ ...form, label: e.target.value })} className="flex-1 px-3 py-2 text-sm rounded-sm" style={{ background: 'var(--navy-deep)', border: '1px solid var(--steel-800)', color: 'var(--ice)' }} />
-          <button type="submit" className="px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider" style={{ background: 'var(--brass)', color: 'var(--navy-deep)' }}>Save</button>
+          <button type="submit" className="px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider" style={{ background: 'var(--ice)', color: 'var(--navy-panel)' }}>Save</button>
         </form>
       )}
 

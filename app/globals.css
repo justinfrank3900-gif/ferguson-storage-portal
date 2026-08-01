@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --navy-deep: #08111f;
-  --navy-panel: #0e1c30;
-  --navy-panel-2: #122238;
-  --steel-800: #2c3a4f;
-  --steel-600: #4a5a72;
-  --steel-400: #8b9bb4;
-  --steel-200: #c7d2e0;
-  --ice: #eef2f7;
-  --brass: #b3925a;
-  --brass-dim: #7d6a45;
-  --danger: #c1543f;
-  --success: #4a8b6f;
+  /* Light institutional palette — platinum background, navy text, silver/steel accent */
+  --navy-deep: #eef1f6;       /* page background — platinum */
+  --navy-panel: #ffffff;      /* card background */
+  --navy-panel-2: #eef1f6;    /* secondary panel / table header background */
+  --steel-800: #d7dee6;       /* borders */
+  --steel-600: #7c8a9c;       /* mid-tone icons / muted text */
+  --steel-400: #64748b;       /* secondary labels */
+  --steel-200: #33465e;       /* tertiary data text */
+  --ice: #0f2137;             /* primary text — deep navy */
+  --brass: #57697d;           /* accent — refined silver/steel */
+  --brass-dim: #98a5b4;       /* lighter silver, subtler accents */
+  --danger: #b23b26;
+  --success: #3d7a5e;
 
   --font-display: var(--font-fraunces);
   --font-body: var(--font-plex-sans);
@@ -39,8 +40,8 @@ html, body {
 
 .guilloche-bg {
   background-image:
-    repeating-radial-gradient(circle at 20% 30%, rgba(179, 146, 90, 0.05) 0px, rgba(179, 146, 90, 0.05) 1px, transparent 1px, transparent 6px),
-    repeating-radial-gradient(circle at 80% 70%, rgba(139, 155, 180, 0.06) 0px, rgba(139, 155, 180, 0.06) 1px, transparent 1px, transparent 5px);
+    repeating-radial-gradient(circle at 20% 30%, rgba(87, 105, 125, 0.05) 0px, rgba(87, 105, 125, 0.05) 1px, transparent 1px, transparent 6px),
+    repeating-radial-gradient(circle at 80% 70%, rgba(124, 138, 156, 0.06) 0px, rgba(124, 138, 156, 0.06) 1px, transparent 1px, transparent 5px);
 }
 
 .hairline {
