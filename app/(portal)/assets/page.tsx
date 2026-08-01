@@ -1,12 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
-
-const STATUS_LABEL: Record<string, string> = {
-  in_transit: 'In Transit',
-  in_storage: 'In Storage',
-  released: 'Released',
-  at_auction: 'At Auction',
-}
+import StatusSelect from './StatusSelect'
 
 export default async function AssetsPage() {
   const supabase = await createClient()
@@ -70,12 +64,7 @@ export default async function AssetsPage() {
                   {a.file_number || '—'}
                 </td>
                 <td className="px-4 py-3">
-                  <span
-                    className="font-mono text-[10px] uppercase px-2 py-1 rounded-sm"
-                    style={{ background: 'var(--navy-panel-2)', color: 'var(--brass)' }}
-                  >
-                    {STATUS_LABEL[a.status] ?? a.status}
-                  </span>
+                  <StatusSelect assetId={a.id} status={a.status} />
                 </td>
                 <td className="px-4 py-3 text-xs" style={{ color: 'var(--steel-400)' }}>
                   {a.pickup_date ?? '—'}
