@@ -60,6 +60,12 @@ export default function NewAssetPage() {
       }
     }
 
+    // Every new pickup automatically needs a lien filed — flag it right away so nothing gets missed
+    await supabase.from('liens').insert({ asset_id: asset.id, status: 'pending' })
+
+    // Start the storage clock the same day
+    await supabase.from('storage_ledger').insert({ asset_id: asset.id, storage_start: new Date().toISOString().slice(0, 10) })
+
     router.push('/assets')
     router.refresh()
   }

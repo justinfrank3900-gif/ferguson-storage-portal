@@ -7,6 +7,7 @@ export default async function DashboardPage() {
     { count: inStorage },
     { count: pickedUpThisMonth },
     { data: outreach },
+    { data: liens },
   ] = await Promise.all([
     supabase.from('assets').select('*', { count: 'exact', head: true }).eq('status', 'in_storage'),
     supabase
@@ -14,16 +15,25 @@ export default async function DashboardPage() {
       .select('*', { count: 'exact', head: true })
       .gte('pickup_date', new Date(new Date().setDate(1)).toISOString().slice(0, 10)),
     supabase.from('bank_outreach').select('total_owed, payment_status'),
+    supabase.from('liens').select('status, expiry_date'),
   ])
 
   const totalReceivable =
     outreach?.filter((o) => o.payment_status !== 'paid').reduce((sum, o) => sum + (o.total_owed || 0), 0) ?? 0
 
+  const liensNeedingAttention =
+    liens?.filter((l) => {
+      if (l.status === 'pending') return true
+      if (!l.expiry_date) return false
+      const days = Math.round((new Date(l.expiry_date).getTime() - Date.now()) / 86400000)
+      return days <= 30
+    }).length ?? 0
+
   const cards = [
     { label: 'Units In Storage', value: inStorage ?? 0 },
     { label: 'Picked Up This Month', value: pickedUpThisMonth ?? 0 },
     { label: 'Receivables Outstanding', value: `$${totalReceivable.toLocaleString()}` },
-    { label: 'Avg Days To Payment', value: '—' },
+    { label: 'Liens Needing Attention', value: liensNeedingAttention, alert: liensNeedingAttention > 0 },
   ]
 
   return (
@@ -47,7 +57,7 @@ export default async function DashboardPage() {
             <p className="font-mono text-[10px] tracking-[0.15em] uppercase mb-3" style={{ color: 'var(--steel-400)' }}>
               {c.label}
             </p>
-            <p className="font-display text-3xl" style={{ color: 'var(--ice)' }}>
+            <p className="font-display text-3xl" style={{ color: c.alert ? 'var(--danger)' : 'var(--ice)' }}>
               {c.value}
             </p>
           </div>
