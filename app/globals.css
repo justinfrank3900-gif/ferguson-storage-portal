@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --navy-deep: #08111f;
+  --navy-panel: #0e1c30;
+  --navy-panel-2: #122238;
+  --steel-800: #2c3a4f;
+  --steel-600: #4a5a72;
+  --steel-400: #8b9bb4;
+  --steel-200: #c7d2e0;
+  --ice: #eef2f7;
+  --brass: #b3925a;
+  --brass-dim: #7d6a45;
+  --danger: #c1543f;
+  --success: #4a8b6f;
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+html, body {
+  background: var(--navy-deep);
+  color: var(--ice);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.guilloche-bg {
+  background-image:
+    repeating-radial-gradient(circle at 20% 30%, rgba(179, 146, 90, 0.05) 0px, rgba(179, 146, 90, 0.05) 1px, transparent 1px, transparent 6px),
+    repeating-radial-gradient(circle at 80% 70%, rgba(139, 155, 180, 0.06) 0px, rgba(139, 155, 180, 0.06) 1px, transparent 1px, transparent 5px);
+}
+
+.hairline {
+  border-color: var(--steel-800);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
