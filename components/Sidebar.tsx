@@ -13,6 +13,7 @@ import {
   FileText,
   Gavel,
   LogOut,
+  MessageSquare,
 } from 'lucide-react'
 
 const NAV = [
@@ -21,6 +22,7 @@ const NAV = [
   { href: '/trustees', label: 'Trustee Files', icon: Users },
   { href: '/liens', label: 'Lien Registry', icon: ShieldCheck },
   { href: '/bank-outreach', label: 'Bank Outreach', icon: Landmark },
+  { href: '/communications', label: 'Communications', icon: MessageSquare },
   { href: '/storage-ledger', label: 'Storage Ledger', icon: Warehouse },
   { href: '/documents', label: 'Documents', icon: FileText },
   { href: '/auction-network', label: 'Auction Network', icon: Gavel },
